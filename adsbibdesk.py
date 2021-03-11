@@ -26,21 +26,22 @@ Input may be one of the following:
 - arXiv abstract page
 - arXiv identifier
 """
-import datetime
-import difflib
-import fnmatch
-import glob
-import logging
-import math
-import optparse
-import os
-import pprint
-import re
-import socket
-import sys
-import tempfile
-import time
-import requests
+
+import datetime # use datetime
+import difflib # use deffllib
+import fnmatch # use fnmatch
+import glob # use glob
+import logging # use logging
+import math # use math
+import optparse # use optparse
+import os # use os 
+import pprint # use pprint
+import re # use re
+import socket # use socket
+import sys # use sys
+import tempfile # use tempfile
+import time # use time
+import requests # use requests
 
 
 try:
@@ -112,7 +113,7 @@ socket.setdefaulttimeout(30)
 
 VERSION = "3.2.0"
 
-
+# create def main():
 def main():
     """Parse options and launch main loop"""
     usage = """Usage: %prog [options] [article_token or pdf_directory]
@@ -218,7 +219,7 @@ updated if it has a new bibcode."""
     else:
         process_articles(args, prefs)
 
-
+# create def process_articles(args, prefs, delay=15):
 def process_articles(args, prefs, delay=15):
     """Workflow for processing article tokens and running process_token()
     to add the article to BibDesk.
@@ -437,6 +438,7 @@ def process_token(article_token, prefs, bibdesk):
     if kept_groups!=[]:
         new_groups=bibdesk.add_groups(pub,kept_groups)
 
+# create def ingest_pdfs(options, args, prefs):
 def ingest_pdfs(options, args, prefs):
     """Workflow for attempting to ingest a directory of PDFs into BibDesk.
 
@@ -480,6 +482,7 @@ def ingest_pdfs(options, args, prefs):
         process_articles(found, prefs)
 
 
+# create def update_arxiv(options, prefs):
 def update_arxiv(options, prefs):
     """
     Workflow for updating arXiv pre-prints automatically with newer bibcodes.
