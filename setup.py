@@ -14,6 +14,7 @@ To build the Add to BibDesk service, run::
     python setup.py service
 """
 
+import sys
 import os
 import re
 import logging
