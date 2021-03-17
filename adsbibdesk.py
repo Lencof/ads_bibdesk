@@ -42,7 +42,7 @@ import sys # use sys
 import tempfile # use tempfile
 import time # use time
 import requests # use requests
-
+import datetime # use datetime
 
 try:
     from string import uppercase
@@ -111,7 +111,7 @@ except ImportError:
 # default timeout for url calls
 socket.setdefaulttimeout(30)
 
-VERSION = "3.2.0"
+VERSION = "5.1.2" # your version
 
 # create def main():
 def main():
